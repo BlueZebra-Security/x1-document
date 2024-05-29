@@ -3,7 +3,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://x1-document.github.io',
+	site: 'https://bluezebra-security.github.io',
 	integrations: [
 		starlight({
 			title: 'My Docs',
@@ -21,6 +21,10 @@ export default defineConfig({
 				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
+				},
+				{
+					label: 'Download',
+					autogenerate: { directory: 'download' },
 				},
 			],
 		}),
