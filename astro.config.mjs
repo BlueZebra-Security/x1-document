@@ -3,7 +3,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://bluezebra-security.pages.github.io/',
+	site: 'https://bluezebra-security.pages.github.io',
 	output: 'static',
 	outDir: './docs',
 	build: {
