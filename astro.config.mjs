@@ -5,7 +5,6 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	site: 'https://bluezebra-security.pages.github.io',
 	output: 'static',
-	outDir: './docs',
 	build: {
 		assets: 'astro'
 	},
