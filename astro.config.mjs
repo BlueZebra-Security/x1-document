@@ -3,28 +3,105 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://bluezebra-security.github.io',
+	site: 'https://bluezebra-security.github.io/x1-document',
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'BlueZebra X1',
 			social: {
 				github: 'https://github.com/withastro/starlight',
 			},
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Products',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
+						{ label: 'Overview', link: '/guides/example/' },
+						{
+							label: 'Access Control',
+							items: [
+								{ label: 'Installation', link: '/constellations/andromeda/' },
+								{ label: 'Operation', link: '/constellations/orion/' },
+							],
+						},
+						{
+							label: 'Lock Devices',
+							items: [
+								{ label: 'Overview', link: '/door/overview' },
+								{
+									label: 'Door Lock', items: [
+										{ label: 'Installation', link: '/constellations/andromeda/' },
+										{ label: 'Operation', link: '/constellations/orion/' },
+									],
+								},
+								{
+									label: 'Flap Barrier Gate', items: [
+										{ label: 'Installation', link: '/constellations/andromeda/' },
+										{ label: 'Operation', link: '/constellations/orion/' },
+									],
+								},
+								{
+									label: 'Locker', items: [
+										{ label: 'Installation', link: '/constellations/andromeda/' },
+										{ label: 'Operation', link: '/constellations/orion/' },
+									],
+								},
+							]
+						},
+						{
+							label: 'Input Devices',
+							items: [
+								{ label: 'Overview', link: '/guides/example/' },
+								{
+									label: 'NFC / RFID / Passcode', items: [
+										{ label: 'Installation', link: '/constellations/andromeda/' },
+										{ label: 'Operation', link: '/constellations/orion/' },
+									],
+								},
+								{
+									label: 'FaceScan', items: [
+										{ label: 'Installation', link: '/constellations/andromeda/' },
+										{ label: 'Operation', link: '/constellations/orion/' },
+									],
+								},
+								{
+									label: 'Fingerprint', items: [
+										{ label: 'Installation', link: '/constellations/andromeda/' },
+										{ label: 'Operation', link: '/constellations/orion/' },
+									],
+								},
+								{
+									label: 'QRCode scan', items: [
+										{ label: 'Installation', link: '/constellations/andromeda/' },
+										{ label: 'Operation', link: '/constellations/orion/' },
+									],
+								},
+							]
+						},
+						{
+							label: 'Manager Room',
+							items: [
+								{ label: 'Installation', link: '/constellations/andromeda/' },
+								{ label: 'User Guide', link: '/constellations/orion/' },
+							],
+						},
 					],
 				},
 				{
 					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					items: [
+						{ label: 'X1 SDK', link: '/constellations/orion/' },
+					],
+					// autogenerate: { directory: 'reference' },
 				},
 				{
 					label: 'Download',
-					autogenerate: { directory: 'download' },
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Manager Room', link: '/download/manager/' },
+						{ label: 'SDK', link: '/download/sdk/' },
+						{ label: 'User Guide', link: '/download/guide/' },
+						{ label: 'Datasheet', link: '/download/datasheet/' },
+					],
 				},
 			],
 		}),

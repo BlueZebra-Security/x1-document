@@ -1,0 +1,61 @@
+---
+title: X1 manager
+description: A reference page in my new Starlight docs site.
+---
+
+import { Card, LinkCard, CardGrid, Icon } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+
+Reference pages are ideal for outlining how things work in terse and clear terms.
+Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
+
+
+<Image src="https://assets-global.website-files.com/61845f7929f5aa517ebab941/6538d03aa9b26e7ac370c3dd_An%20example%20of%20on-premise%20access%20control%20software%20system.jpg" 
+alt="screenshot" width="600" height="490" />
+
+
+{/* ![An illustration of planets and stars featuring the word “astro”](https://raw.githubusercontent.com/withastro/docs/main/public/default-og-image.png) */}
+
+
+Choose the version that suits your operating system (OS) and CPU architecture
+<br/>
+
+<CardGrid>
+	<Card title="macOS" icon="apple" >
+		- MacOS 12 and later
+		- [.dmg (Apple Silicon)](https://cdn.bluezebra.co.th/manager/macos/x1_manager-1.0.0-x64.dmg)
+		- [.dmg (Intel)](https://cdn.bluezebra.co.th/manager/macos/x1_manager-1.0.0-arm64.dmg)
+	</Card>
+	<Card title="Windows" icon="seti:windows">
+		- Windows 10 and later
+		- [.msix (x86_64)](https://cdn.bluezebra.co.th/manager/windows/x1_manager-1.0.0-x64.msix)
+		- [.msix (ARM64)](https://cdn.bluezebra.co.th/manager/windows/x1_manager-1.0.0-arm64.msix)
+	</Card>
+	<Card title="Linux" icon="linux">
+		- Ubuntu 20.04 and later*
+		- [.AppImage (x86_64)](https://cdn.bluezebra.co.th/manager/linux/x1_manager-1.0.0-x64.AppImage)
+		- [.AppImage (ARM64)](https://cdn.bluezebra.co.th/manager/linux/x1_manager-1.0.0-arm64.AppImage)
+	</Card>
+	<Card title="Docker Image" icon="seti:docker">
+		- Docker 20.10 and later
+		- [Docker Hub](https://hub.docker.com/r/bluezebra/manager)
+	</Card>
+</CardGrid>
+
+<br/>
+<details>
+  <summary>How to install using AppImage?</summary>
+	1. Allow executing file as program
+	```zsh
+	chmod +x Dataflare.AppImage
+	```
+
+	2. Open manager
+	```zsh
+	./Dataflare.AppImage
+	```
+
+> AppImages require FUSE version 2 to run. Many distributions have a working FUSE setup out-of-the-box. However if it is not working for you, you may need to install and configure FUSE manually.
+https://github.com/AppImage/AppImageKit/wiki/FUSE
+</details>
